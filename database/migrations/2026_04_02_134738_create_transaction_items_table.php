@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('transactions_items', function (Blueprint $table) {
+        Schema::create('transaction_items', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('transaction_id')->constrained()->cascadeOnDelete(); 
@@ -26,6 +26,6 @@ $table->decimal('unit_price_fcfa', 10, 2);
      */
     public function down(): void
     {
-        Schema::dropIfExists('transactions_items');
+        Schema::dropIfExists('transaction_items');
     }
 };

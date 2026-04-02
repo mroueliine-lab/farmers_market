@@ -6,5 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Farmer extends Model
 {
-    //
+    protected $fillable = [
+        'firstname',
+        'lastname',
+        'email',
+        'phone_number',
+        'credit_limit',
+        'identifier'
+
+    ];
+
+
+
+
 }
