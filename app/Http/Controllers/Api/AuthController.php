@@ -16,6 +16,7 @@ class AuthController extends Controller
         'name' => 'required|string|max:255',
         'email' => 'required|email|unique:users,email',
         'password' => 'required|string|min:8|confirmed',
+        'role' => 'required|string|in:admin,supervisor,operator', // Ensure role is one of the allowed values
     ]);
     
     // Create user (password automatically hashed)
@@ -66,4 +67,17 @@ public function login(Request $request)
         'user' => $user,
         'token' => $token,
     ], 200);
+}
+
+public function logout(Request $request)
+{
+    // Revoke the token that was used to authenticate the current request
+    $request->user()->currentAccessToken()->delete();
+
+    return response()->json([
+        'success' => true,
+        'message' => 'User logged out successfully',
+    ], 200);
+}
+
 }
