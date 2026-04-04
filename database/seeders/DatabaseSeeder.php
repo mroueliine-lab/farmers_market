@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+USE App\Models\Setting;
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,17 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'role' => 'admin',
+        ]);
+
+        Setting::create([
+            'key' => 'interest_rate',
+            'value' => '30', // 30% interest rate for credit transactions,
+        ]);
+
+        Setting::create([
+            'key' => 'commodity_rate',
+            'value' => '1000', // 1 kg 1000 fcfa
         ]);
     }
 }

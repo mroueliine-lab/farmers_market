@@ -16,7 +16,10 @@ class Farmer extends Model
 
     ];
 
-
+    public function debts()
+    {
+        return $this->hasMany(Debt::class);
+    }
 
 
 }
