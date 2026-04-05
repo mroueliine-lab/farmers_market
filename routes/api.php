@@ -7,6 +7,7 @@ use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\FarmerController;
 use App\Http\Controllers\Api\TransactionController;
+use App\Http\Controllers\Api\RepaymentController;
 
 // Public routes
 Route::post('/register', [AuthController::class, 'register']);
@@ -53,11 +54,16 @@ Route::middleware('auth:sanctum')->group(function () {
 
         Route::get('/transactions', [TransactionController::class, 'index']);
         Route::get('/transactions/{id}', [TransactionController::class, 'show']);
-    });
+        Route::get('/farmers/{id}/debts', [FarmerController::class, 'debts']);
+        Route::get('/farmers/{id}/repayments', [FarmerController::class, 'repayments']);
+
+        });
 
     // Operator only — create transactions
     Route::middleware('role:operator')->group(function () {
         Route::post('/transactions', [TransactionController::class, 'store']);
-    });
+        Route::post('/repayments', [RepaymentController::class, 'store']);
+
+        });
 
 });

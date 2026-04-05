@@ -46,5 +46,19 @@ public function search(Request $request)
     return response()->json(['success' => true, 'data' => $farmer]);
 }
 
+public function debts($id)
+{
+    $farmer = Farmer::findOrFail($id);
+    $debts = $farmer->debts()->orderBy('created_at', 'asc')->get();
+    return response()->json(['success' => true, 'data' => $debts]);
+}
+
+public function repayments($id)
+{
+    $farmer = Farmer::findOrFail($id);
+    $repayments = $farmer->repayments()->orderBy('created_at', 'asc')->get();
+    return response()->json(['success' => true, 'data' => $repayments]);
+}
+
 
 }

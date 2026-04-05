@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Debt;
+use App\Models\Repayment;
 
 class Farmer extends Model
 {
@@ -19,6 +21,11 @@ class Farmer extends Model
     public function debts()
     {
         return $this->hasMany(Debt::class);
+    }
+
+    public function repayments()
+    {
+        return $this->hasMany(Repayment::class);
     }
 
 
