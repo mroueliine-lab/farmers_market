@@ -13,7 +13,8 @@ class CategoryController extends Controller
 // List all categories with their children
 public function index()
 {
-    $categories = Category::with('children')->whereNull('parent_id')->get();
+    $categories = Category::with(['children', 'children.products', 'products'])->whereNull('parent_id')->get();
+
     return response()->json(['success' => true, 'data' => $categories]);
 }
 
