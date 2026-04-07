@@ -3,22 +3,15 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreFarmerRequest;
 use Illuminate\Http\Request;
 use App\Models\Farmer;
 
 class FarmerController extends Controller
 {
-    public function store(Request $request)
+    public function store(StoreFarmerRequest $request)
 {
-    $validated = $request->validate([
-        'identifier'   => 'required|string|unique:farmers,identifier',
-        'firstname'    => 'required|string',
-        'lastname'     => 'required|string',
-        'phone_number' => 'required|string|unique:farmers,phone_number',
-        'credit_limit' => 'required|numeric|min:0',
-    ]);
-
-    $farmer = Farmer::create($validated);
+    $farmer = Farmer::create($request->validated());
     return response()->json(['success' => true, 'data' => $farmer], 201);
 }
 

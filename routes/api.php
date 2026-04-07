@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\FarmerController;
 use App\Http\Controllers\Api\TransactionController;
 use App\Http\Controllers\Api\RepaymentController;
+use App\Http\Controllers\Api\DebtController;
 
 // Public routes
 Route::post('/register', [AuthController::class, 'register']);
@@ -43,6 +44,8 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/products', [ProductController::class, 'store']);
         Route::put('/products/{id}', [ProductController::class, 'update']);
         Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+        Route::get('/debts', [DebtController::class, 'index']);
+
     });
 
     // All authenticated roles — farmers & transaction reads
@@ -61,7 +64,7 @@ Route::middleware('auth:sanctum')->group(function () {
         });
 
     // Operator only — create transactions
-    Route::middleware('role:operator')->group(function () {
+        Route::middleware('role:operator')->group(function () {
         Route::post('/transactions', [TransactionController::class, 'store']);
         Route::post('/repayments', [RepaymentController::class, 'store']);
 

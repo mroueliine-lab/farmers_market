@@ -1,0 +1,2049 @@
+{
+  "info": {
+    "_postman_id": "d2969254-97f0-4774-8486-7e9c6115b5ab",
+    "name": "Farmers",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "27516344"
+  },
+  "item": [
+    {
+      "name": "create user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"hello\":\"world\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/register",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "register"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "create user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"lune\",\r\n     \"email\": \"admin@test.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\":\"password123\",\r\n    \"role\":\"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/register",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 03 Apr 2026 22:00:53 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"name\": \"lune\",\n        \"email\": \"admin@test.com\",\n        \"role\": \"admin\",\n        \"updated_at\": \"2026-04-03T22:00:52.000000Z\",\n        \"created_at\": \"2026-04-03T22:00:52.000000Z\",\n        \"id\": 2\n    },\n    \"token\": \"3|wWwWqC4Pcnmz7VheJJyIEPAmCJ8g1mFRWpC2SOA80a4a4701\"\n}"
+        },
+        {
+          "name": "create user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"lune\",\r\n     \"email\": \"admin1@test.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\":\"password123\",\r\n    \"role\":\"operator\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/register",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:36:37 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"name\": \"lune\",\n        \"email\": \"admin1@test.com\",\n        \"role\": \"operator\",\n        \"updated_at\": \"2026-04-07T10:36:37.000000Z\",\n        \"created_at\": \"2026-04-07T10:36:37.000000Z\",\n        \"id\": 5\n    },\n    \"token\": \"1|vx9u0eVl4RL3u16BFR3sQL3UKEYzM7OhcX78zWgFdd282a09\"\n}"
+        },
+        {
+          "name": "create user",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"line\",\r\n     \"email\": \"admin2@test.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\":\"password123\",\r\n    \"role\":\"admin\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/register",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:39:47 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"name\": \"line\",\n        \"email\": \"admin2@test.com\",\n        \"role\": \"admin\",\n        \"updated_at\": \"2026-04-07T10:39:47.000000Z\",\n        \"created_at\": \"2026-04-07T10:39:47.000000Z\",\n        \"id\": 6\n    },\n    \"token\": \"3|gVT7PL35MCzPefcsIIAqIU9fbSyGbVFsV1XdlLRBea85cebc\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.environment.set(\"admin_token\", pm.response.json().token);\r",
+              "pm.environment.set(\"token\", pm.response.json().token);\r",
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"mroueliine@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}"
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/login",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"email\": \"admin1@test.com\",\r\n    \"password\": \"password123\"}"
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/login",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:37:30 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"User logged in successfully\",\n    \"user\": {\n        \"id\": 5,\n        \"name\": \"lune\",\n        \"email\": \"admin1@test.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2026-04-07T10:36:37.000000Z\",\n        \"updated_at\": \"2026-04-07T10:36:37.000000Z\",\n        \"role\": \"operator\"\n    },\n    \"token\": \"2|bmuIcfoW8Q9A53HcHsfXy4z3OnQyepnuEOQJJa5s87769438\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "logout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://farmers_market.test/api/logout",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "logout"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": null,
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "logout",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://farmers_market.test/api/logout",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "logout"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:38:23 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"User logged out successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "create category/subcategory",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{admin_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "\r\n    {\r\n    \"name\": \"Herbicides\",\r\n    \"parent_id\": 1\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/categories",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "create category/subcategory",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{admin_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n    {\r\n    \"name\": \"Herbicides\",\r\n    \"parent_id\": 1\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/categories",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:40:24 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"Herbicides\",\n        \"parent_id\": 1,\n        \"updated_at\": \"2026-04-07T10:40:24.000000Z\",\n        \"created_at\": \"2026-04-07T10:40:24.000000Z\",\n        \"id\": 10\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "retrieve all categories",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/categories",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "categories"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "retrieve all categories",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/categories",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:41:40 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Pesticides\",\n            \"parent_id\": null,\n            \"children\": [\n                {\n                    \"id\": 4,\n                    \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"name\": \"Herbicides\",\n                    \"parent_id\": 1,\n                    \"products\": [\n                        {\n                            \"id\": 1,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Kalach 360 SL\",\n                            \"description\": \"Herbicide systémique à base de glyphosate.\",\n                            \"price_fcfa\": 3500,\n                            \"category_id\": 4\n                        },\n                        {\n                            \"id\": 2,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Primextra Gold\",\n                            \"description\": \"Herbicide sélectif pour maïs et sorgho.\",\n                            \"price_fcfa\": 4200,\n                            \"category_id\": 4\n                        }\n                    ]\n                },\n                {\n                    \"id\": 5,\n                    \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"name\": \"Insecticides\",\n                    \"parent_id\": 1,\n                    \"products\": [\n                        {\n                            \"id\": 3,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Lambdacal 36 EC\",\n                            \"description\": \"Insecticide contre les ravageurs du coton.\",\n                            \"price_fcfa\": 2800,\n                            \"category_id\": 5\n                        },\n                        {\n                            \"id\": 4,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Deltamethrine 25\",\n                            \"description\": \"Insecticide à large spectre pour toutes cultures.\",\n                            \"price_fcfa\": 3200,\n                            \"category_id\": 5\n                        }\n                    ]\n                },\n                {\n                    \"id\": 10,\n                    \"created_at\": \"2026-04-07T10:40:24.000000Z\",\n                    \"updated_at\": \"2026-04-07T10:40:24.000000Z\",\n                    \"name\": \"Herbicides\",\n                    \"parent_id\": 1,\n                    \"products\": []\n                }\n            ],\n            \"products\": []\n        },\n        {\n            \"id\": 2,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Engrais\",\n            \"parent_id\": null,\n            \"children\": [\n                {\n                    \"id\": 6,\n                    \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"name\": \"Engrais NPK\",\n                    \"parent_id\": 2,\n                    \"products\": [\n                        {\n                            \"id\": 5,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"NPK 15-15-15\",\n                            \"description\": \"Engrais équilibré pour toutes cultures.\",\n                            \"price_fcfa\": 18000,\n                            \"category_id\": 6\n                        },\n                        {\n                            \"id\": 6,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Urée 46%\",\n                            \"description\": \"Engrais azoté pour la croissance des céréales.\",\n                            \"price_fcfa\": 15000,\n                            \"category_id\": 6\n                        }\n                    ]\n                },\n                {\n                    \"id\": 7,\n                    \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"name\": \"Engrais Organiques\",\n                    \"parent_id\": 2,\n                    \"products\": [\n                        {\n                            \"id\": 7,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Compost Naturel\",\n                            \"description\": \"Compost organique enrichi en micro-éléments.\",\n                            \"price_fcfa\": 8000,\n                            \"category_id\": 7\n                        }\n                    ]\n                }\n            ],\n            \"products\": []\n        },\n        {\n            \"id\": 3,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Semences\",\n            \"parent_id\": null,\n            \"children\": [\n                {\n                    \"id\": 8,\n                    \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"name\": \"Semences Maïs\",\n                    \"parent_id\": 3,\n                    \"products\": [\n                        {\n                            \"id\": 8,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Maïs EVDT 99 STR\",\n                            \"description\": \"Semence améliorée résistante à la sécheresse.\",\n                            \"price_fcfa\": 6500,\n                            \"category_id\": 8\n                        }\n                    ]\n                },\n                {\n                    \"id\": 9,\n                    \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"name\": \"Semences Riz\",\n                    \"parent_id\": 3,\n                    \"products\": [\n                        {\n                            \"id\": 9,\n                            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                            \"name\": \"Riz WITA 9\",\n                            \"description\": \"Variété haut rendement pour bas-fonds.\",\n                            \"price_fcfa\": 5500,\n                            \"category_id\": 9\n                        }\n                    ]\n                }\n            ],\n            \"products\": []\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "create new product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{admin_token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"Engrais NPK\",\r\n    \"description\": \"Herbicide for weeds\",\r\n    \"price_fcfa\": 5000,\r\n    \"category_id\": 1\r\n}"
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/products",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "create new product",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{admin_token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Engrais NPK\",\r\n    \"description\": \"Herbicide for weeds\",\r\n    \"price_fcfa\": 5000,\r\n    \"category_id\": 1\r\n}"
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/products",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:41:47 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"Engrais NPK\",\n        \"description\": \"Herbicide for weeds\",\n        \"price_fcfa\": 5000,\n        \"category_id\": 1,\n        \"updated_at\": \"2026-04-07T10:41:47.000000Z\",\n        \"created_at\": \"2026-04-07T10:41:47.000000Z\",\n        \"id\": 10\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "create farmers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"identifier\": \"FARM001\",\r\n    \"firstname\": \"Kouassi\",\r\n    \"lastname\": \"Yao\",\r\n    \"phone_number\": \"0700000001\",\r\n    \"credit_limit\": 50000\r\n}"
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/farmers",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "farmers"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "create farmers",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"identifier\": \"FARM001\",\r\n    \"firstname\": \"Kouassi\",\r\n    \"lastname\": \"Yao\",\r\n    \"phone_number\": \"0700000001\",\r\n    \"credit_limit\": 50000\r\n}"
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/farmers",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "farmers"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:41:55 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"identifier\": \"FARM001\",\n        \"firstname\": \"Kouassi\",\n        \"lastname\": \"Yao\",\n        \"phone_number\": \"0700000001\",\n        \"credit_limit\": 50000,\n        \"updated_at\": \"2026-04-07T10:41:55.000000Z\",\n        \"created_at\": \"2026-04-07T10:41:55.000000Z\",\n        \"id\": 4\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "search farmer by identifier/phone",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://farmers_market.test/api/farmers/search?q=0700000001",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "farmers",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "0700000001"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "search farmer by identifier/phone",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://farmers_market.test/api/farmers/search?q=0700000001",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "farmers",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "0700000001"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:42:14 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 4,\n        \"created_at\": \"2026-04-07T10:41:55.000000Z\",\n        \"updated_at\": \"2026-04-07T10:41:55.000000Z\",\n        \"firstname\": \"Kouassi\",\n        \"lastname\": \"Yao\",\n        \"email\": null,\n        \"phone_number\": \"0700000001\",\n        \"credit_limit\": 50000,\n        \"identifier\": \"FARM001\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "view farmer profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://farmers_market.test/api/farmers/1",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "farmers",
+            "1"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "view farmer profile",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://farmers_market.test/api/farmers/1",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "farmers",
+                "1"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:42:23 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n        \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n        \"firstname\": \"Kouassi\",\n        \"lastname\": \"Yao\",\n        \"email\": \"kouassi.yao@mail.ci\",\n        \"phone_number\": \"0701234567\",\n        \"credit_limit\": 150000,\n        \"identifier\": \"FM-001\",\n        \"debts\": [\n            {\n                \"id\": 1,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"original_amount_fcfa\": 16900,\n                \"remaining_amount_fcfa\": 16900,\n                \"status\": \"pending\",\n                \"transaction_id\": 2,\n                \"farmer_id\": 1,\n                \"repayment_id\": null\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "create transactions",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"farmer_id\": 1,\r\n    \"payment_method\": \"credit\",\r\n    \"items\": [\r\n        {\"product_id\": 1, \"quantity\": 2},\r\n        {\"product_id\": 2, \"quantity\": 1}\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/transactions",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "transactions"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "create transactions",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"farmer_id\": 1,\r\n    \"payment_method\": \"credit\",\r\n    \"items\": [\r\n        {\"product_id\": 1, \"quantity\": 2},\r\n        {\"product_id\": 2, \"quantity\": 1}\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/transactions",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "transactions"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:42:31 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"farmer_id\": 1,\n        \"operator_id\": 5,\n        \"total_price_fcfa\": 11200,\n        \"payment_method\": \"credit\",\n        \"interest_rate\": \"30\",\n        \"credited_amount_fcfa\": 14560,\n        \"updated_at\": \"2026-04-07T10:42:31.000000Z\",\n        \"created_at\": \"2026-04-07T10:42:31.000000Z\",\n        \"id\": 5\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get all products",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://farmers_market.test/api/products",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get all products",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://farmers_market.test/api/products",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "products"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:42:41 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Kalach 360 SL\",\n            \"description\": \"Herbicide systémique à base de glyphosate.\",\n            \"price_fcfa\": 3500,\n            \"category_id\": 4,\n            \"category\": {\n                \"id\": 4,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Herbicides\",\n                \"parent_id\": 1\n            }\n        },\n        {\n            \"id\": 2,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Primextra Gold\",\n            \"description\": \"Herbicide sélectif pour maïs et sorgho.\",\n            \"price_fcfa\": 4200,\n            \"category_id\": 4,\n            \"category\": {\n                \"id\": 4,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Herbicides\",\n                \"parent_id\": 1\n            }\n        },\n        {\n            \"id\": 3,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Lambdacal 36 EC\",\n            \"description\": \"Insecticide contre les ravageurs du coton.\",\n            \"price_fcfa\": 2800,\n            \"category_id\": 5,\n            \"category\": {\n                \"id\": 5,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Insecticides\",\n                \"parent_id\": 1\n            }\n        },\n        {\n            \"id\": 4,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Deltamethrine 25\",\n            \"description\": \"Insecticide à large spectre pour toutes cultures.\",\n            \"price_fcfa\": 3200,\n            \"category_id\": 5,\n            \"category\": {\n                \"id\": 5,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Insecticides\",\n                \"parent_id\": 1\n            }\n        },\n        {\n            \"id\": 5,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"NPK 15-15-15\",\n            \"description\": \"Engrais équilibré pour toutes cultures.\",\n            \"price_fcfa\": 18000,\n            \"category_id\": 6,\n            \"category\": {\n                \"id\": 6,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Engrais NPK\",\n                \"parent_id\": 2\n            }\n        },\n        {\n            \"id\": 6,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Urée 46%\",\n            \"description\": \"Engrais azoté pour la croissance des céréales.\",\n            \"price_fcfa\": 15000,\n            \"category_id\": 6,\n            \"category\": {\n                \"id\": 6,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Engrais NPK\",\n                \"parent_id\": 2\n            }\n        },\n        {\n            \"id\": 7,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Compost Naturel\",\n            \"description\": \"Compost organique enrichi en micro-éléments.\",\n            \"price_fcfa\": 8000,\n            \"category_id\": 7,\n            \"category\": {\n                \"id\": 7,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Engrais Organiques\",\n                \"parent_id\": 2\n            }\n        },\n        {\n            \"id\": 8,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Maïs EVDT 99 STR\",\n            \"description\": \"Semence améliorée résistante à la sécheresse.\",\n            \"price_fcfa\": 6500,\n            \"category_id\": 8,\n            \"category\": {\n                \"id\": 8,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Semences Maïs\",\n                \"parent_id\": 3\n            }\n        },\n        {\n            \"id\": 9,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"name\": \"Riz WITA 9\",\n            \"description\": \"Variété haut rendement pour bas-fonds.\",\n            \"price_fcfa\": 5500,\n            \"category_id\": 9,\n            \"category\": {\n                \"id\": 9,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Semences Riz\",\n                \"parent_id\": 3\n            }\n        },\n        {\n            \"id\": 10,\n            \"created_at\": \"2026-04-07T10:41:47.000000Z\",\n            \"updated_at\": \"2026-04-07T10:41:47.000000Z\",\n            \"name\": \"Engrais NPK\",\n            \"description\": \"Herbicide for weeds\",\n            \"price_fcfa\": 5000,\n            \"category_id\": 1,\n            \"category\": {\n                \"id\": 1,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"name\": \"Pesticides\",\n                \"parent_id\": null\n            }\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "get transactions",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://farmers_market.test/api/transactions/2",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "transactions",
+            "2"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get transactions",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://farmers_market.test/api/transactions/2",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "transactions",
+                "2"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:42:49 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 2,\n        \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n        \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n        \"total_price_fcfa\": 13000,\n        \"payment_method\": \"credit\",\n        \"interest_rate\": 30,\n        \"credited_amount_fcfa\": 16900,\n        \"farmer_id\": 1,\n        \"operator_id\": 3,\n        \"items\": [\n            {\n                \"id\": 3,\n                \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                \"transaction_id\": 2,\n                \"product_id\": 8,\n                \"quantity\": 2,\n                \"unit_price_fcfa\": 6500,\n                \"product\": {\n                    \"id\": 8,\n                    \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n                    \"name\": \"Maïs EVDT 99 STR\",\n                    \"description\": \"Semence améliorée résistante à la sécheresse.\",\n                    \"price_fcfa\": 6500,\n                    \"category_id\": 8\n                }\n            }\n        ],\n        \"farmer\": {\n            \"id\": 1,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"firstname\": \"Kouassi\",\n            \"lastname\": \"Yao\",\n            \"email\": \"kouassi.yao@mail.ci\",\n            \"phone_number\": \"0701234567\",\n            \"credit_limit\": 150000,\n            \"identifier\": \"FM-001\"\n        },\n        \"debt\": {\n            \"id\": 1,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"original_amount_fcfa\": 16900,\n            \"remaining_amount_fcfa\": 16900,\n            \"status\": \"pending\",\n            \"transaction_id\": 2,\n            \"farmer_id\": 1,\n            \"repayment_id\": null\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "repayments",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"farmer_id\":1,\r\n    \"kg_received\":10\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://farmers_market.test/api/repayments",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "repayments"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "repayments",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"farmer_id\":1,\r\n    \"kg_received\":10\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://farmers_market.test/api/repayments",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "repayments"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:43:03 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"farmer_id\": 1,\n        \"operator_id\": 5,\n        \"kg_received\": 10,\n        \"commodity_rate\": \"1000\",\n        \"fcfa_value\": 10000,\n        \"updated_at\": \"2026-04-07T10:43:03.000000Z\",\n        \"created_at\": \"2026-04-07T10:43:03.000000Z\",\n        \"id\": 2\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "farmer's debt",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://farmers_market.test/api/farmers/2/debts",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "farmers",
+            "2",
+            "debts"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "farmer's debt",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://farmers_market.test/api/farmers/2/debts",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "farmers",
+                "2",
+                "debts"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:43:13 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"created_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"updated_at\": \"2026-04-06T20:03:15.000000Z\",\n            \"original_amount_fcfa\": 42900,\n            \"remaining_amount_fcfa\": 22900,\n            \"status\": \"partial\",\n            \"transaction_id\": 3,\n            \"farmer_id\": 2,\n            \"repayment_id\": 1\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "farmer's repayment",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://farmers_market.test/api/farmers/1/repayments",
+          "protocol": "http",
+          "host": [
+            "farmers_market",
+            "test"
+          ],
+          "path": [
+            "api",
+            "farmers",
+            "1",
+            "repayments"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": null,
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "farmer's repayment",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://farmers_market.test/api/farmers/1/repayments",
+              "protocol": "http",
+              "host": [
+                "farmers_market",
+                "test"
+              ],
+              "path": [
+                "api",
+                "farmers",
+                "1",
+                "repayments"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.25.2"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.4.19"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 07 Apr 2026 10:43:31 GMT"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"created_at\": \"2026-04-07T10:43:03.000000Z\",\n            \"updated_at\": \"2026-04-07T10:43:03.000000Z\",\n            \"kg_received\": 10,\n            \"commodity_rate\": 1000,\n            \"fcfa_value\": 10000,\n            \"farmer_id\": 1,\n            \"operator_id\": 5\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ]
+}

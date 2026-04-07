@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreTransactionRequest;
 use App\Models\Transaction;
 use App\Models\Product;
 use App\Models\Setting;
@@ -13,15 +13,9 @@ use App\Models\Farmer;
 
 class TransactionController extends Controller
 {
-public function store(Request $request)
+public function store(StoreTransactionRequest $request)
     {
-        $validated = $request->validate([
-            'farmer_id'          => 'required|exists:farmers,id',
-            'payment_method'     => 'required|in:cash,credit',
-            'items'              => 'required|array|min:1',
-            'items.*.product_id' => 'required|exists:products,id',
-            'items.*.quantity'   => 'required|integer|min:1',
-        ]);
+        $validated = $request->validated();
 
 $productIds = collect($validated['items'])->pluck('product_id');
 $products = Product::whereIn('id', $productIds)->get()->keyBy('id');

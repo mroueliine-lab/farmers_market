@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Requests\StoreOperatorRequest;
+use App\Http\Requests\StoreUserRequest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -35,23 +37,18 @@ public function update(Request $request, $id)
     return response()->json(['success' => true, 'data' => $user]);
 }
 
-public function store(Request $request)
+public function store(StoreUserRequest $request)
 {
-    return $this->createUser($request, 'supervisor');
+    return $this->createUser($request->validated(), 'supervisor');
 }
 
-public function storeOperator(Request $request)
+public function storeOperator(StoreOperatorRequest $request)
 {
-    return $this->createUser($request, 'operator');
+    return $this->createUser($request->validated(), 'operator');
 }
 
-private function createUser(Request $request, string $role)
+private function createUser(array $validated, string $role)
 {
-    $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|unique:users,email',
-        'password' => 'required|string|min:8|confirmed',
-    ]);
 
     $user = User::create([
         'name' => $validated['name'],
