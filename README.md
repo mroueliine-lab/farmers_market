@@ -138,3 +138,4 @@ Create a Postman environment with these variables:
 - `token` (general)
 
 After logging in, the login request auto-saves `admin_token` and `token` via the Tests script.
+
