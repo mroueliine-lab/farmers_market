@@ -52,14 +52,6 @@ The seeder creates:
 - 3 farmers with different credit limits
 - Sample transactions (cash & credit) and a partial repayment
 
-### Default credentials
-
-| Role       | Email                      | Password  |
-|------------|----------------------------|-----------|
-| Admin      | admin@marche.ci            | password  |
-| Supervisor | superviseur@marche.ci      | password  |
-| Operator 1 | operateur1@marche.ci       | password  |
-| Operator 2 | operateur2@marche.ci       | password  |
 
 ## API
 

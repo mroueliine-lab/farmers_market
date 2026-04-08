@@ -26,6 +26,10 @@ public function show($id)
 
 public function search(Request $request)
 {
+    $request->validate([
+        'q' => 'required|string|max:50',
+    ]);
+
     $query = $request->query('q');
 
     $farmer = Farmer::where('identifier', $query)
