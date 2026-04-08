@@ -10,7 +10,7 @@ class DebtController extends Controller
 {
      public function index()
     {
-        $debts = Debt::with(['farmer', 'transaction'])->get();
+        $debts = Debt::with(['farmer', 'transaction'])->paginate(50);
         return response()->json(['success' => true, 'data' => $debts]);
     }
 }
