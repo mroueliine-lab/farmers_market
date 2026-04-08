@@ -8,17 +8,16 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CheckRole
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  Closure(Request): (Response)  $next
-     */
     public function handle(Request $request, Closure $next, ...$roles): Response
     {
-         if (!in_array($request->user()->role, $roles)) {
-        return response()->json(['error' => 'Forbidden: insufficient permissions'], 403);
-    }
+        if (!$request->user()) {
+            return response()->json(['error' => 'Unauthenticated'], 401);
+        }
 
-    return $next($request);
+        if (!in_array($request->user()->role->value, $roles)) {
+            return response()->json(['error' => 'Forbidden: insufficient permissions'], 403);
+        }
+
+        return $next($request);
     }
 }

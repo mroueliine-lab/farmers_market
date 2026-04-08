@@ -14,18 +14,16 @@ class AuthController extends Controller
 {
     // Validate input
     $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|unique:users,email',
+        'name'     => 'required|string|max:255',
+        'email'    => 'required|email|unique:users,email',
         'password' => 'required|string|min:8|confirmed',
-        'role' => 'required|string|in:admin,supervisor,operator', // Ensure role is one of the allowed values
     ]);
-    
-    // Create user (password automatically hashed)
+
     $user = User::create([
-        'name' => $validated['name'],
-        'email' => $validated['email'],
+        'name'     => $validated['name'],
+        'email'    => $validated['email'],
         'password' => Hash::make($validated['password']),
-        'role'=> $validated['role']
+        'role'     => \App\Enums\UserRole::Operator,
     ]);
 
     // Create API token
