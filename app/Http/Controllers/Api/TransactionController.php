@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreTransactionRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Support\Facades\DB;
 use App\Models\Transaction;
 use App\Models\Product;
@@ -50,13 +51,13 @@ public function store(StoreTransactionRequest $request)
                     ->sum('remaining_amount_fcfa');
 
                 if ($existingDebt + $creditedAmount > $farmer->credit_limit) {
-                    abort(422, json_encode([
+                    throw new HttpResponseException(response()->json([
                         'success'      => false,
                         'message'      => 'Credit limit exceeded',
                         'credit_limit' => $farmer->credit_limit,
                         'current_debt' => $existingDebt,
                         'new_debt'     => $creditedAmount,
-                    ]));
+                    ], 422));
                 }
             }
 

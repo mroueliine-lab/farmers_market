@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Debt;
@@ -9,7 +10,7 @@ use App\Models\Repayment;
 
 class Farmer extends Model
 {
-    use SoftDeletes;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'firstname',
@@ -19,6 +20,10 @@ class Farmer extends Model
         'credit_limit',
         'identifier'
 
+    ];
+
+    protected $casts = [
+        'credit_limit' => 'decimal:2',
     ];
 
     public function debts()
